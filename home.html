@@ -216,12 +216,12 @@
         <div class="py-[30px]">
           <div class="bg-[#2d2d2d] mb-[15px]">
             <div
-              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer"
+              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer faqQustion"
             >
               <h3>What is Netflix?</h3>
               <span class="absolute right-[20px] top-[15px]">+</span>
             </div>
-            <div class="text-white text-[20px] p-[20px]">
+            <div class="text-white text-[20px] origin-top scale-y-0 h-[0px]">
               <p>
                 Netflix is a streaming service that offers a wide variety of
                 award-winning TV shows, movies, anime, documentaries, and more
@@ -239,12 +239,12 @@
 
           <div class="bg-[#2d2d2d] mb-[15px]">
             <div
-              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer"
+              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer faqQustion"
             >
               <h3>What is Netflix?</h3>
               <span class="absolute right-[20px] top-[15px]">+</span>
             </div>
-            <div class="text-white text-[20px] p-[20px]">
+            <div class="text-white text-[20px] origin-top scale-y-0 h-[0px]">
               <p>
                 Netflix is a streaming service that offers a wide variety of
                 award-winning TV shows, movies, anime, documentaries, and more
@@ -262,12 +262,12 @@
 
           <div class="bg-[#2d2d2d] mb-[15px]">
             <div
-              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer"
+              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer faqQustion"
             >
               <h3>What is Netflix?</h3>
               <span class="absolute right-[20px] top-[15px]">+</span>
             </div>
-            <div class="text-white text-[20px] p-[20px]">
+            <div class="text-white text-[20px] origin-top scale-y-0 h-[0px]">
               <p>
                 Netflix is a streaming service that offers a wide variety of
                 award-winning TV shows, movies, anime, documentaries, and more
@@ -285,35 +285,12 @@
 
           <div class="bg-[#2d2d2d] mb-[15px]">
             <div
-              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer"
+              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer faqQustion"
             >
               <h3>What is Netflix?</h3>
               <span class="absolute right-[20px] top-[15px]">+</span>
             </div>
-            <div class="text-white text-[20px] p-[20px]">
-              <p>
-                Netflix is a streaming service that offers a wide variety of
-                award-winning TV shows, movies, anime, documentaries, and more
-                on thousands of internet-connected devices.
-              </p>
-
-              <p>
-                You can watch as much as you want, whenever you want without a
-                single commercial – all for one low monthly price. There's
-                always something new to discover and new TV shows and movies are
-                added every week!
-              </p>
-            </div>
-          </div>
-
-          <div class="bg-[#2d2d2d] mb-[15px]">
-            <div
-              class="p-[20px] text-white text-[30px] relative border-b-[2px] border-[black] hover:bg-[rgb(78,78,78)] duration-300 cursor-pointer"
-            >
-              <h3>What is Netflix?</h3>
-              <span class="absolute right-[20px] top-[15px]">+</span>
-            </div>
-            <div class="text-white text-[20px] p-[20px]">
+            <div class="text-white text-[20px] origin-top scale-y-0 h-[0px]">
               <p>
                 Netflix is a streaming service that offers a wide variety of
                 award-winning TV shows, movies, anime, documentaries, and more
@@ -329,7 +306,51 @@
             </div>
           </div>
         </div>
+        <p class="text-[20px] text-white text-center">
+          Ready to watch? Enter your email to create or restart your membership.
+        </p>
+
+        <div class="max-w-[700px] sm:px-[10px] px-[40px] mx-auto mt-[30px]">
+          <form
+            action=""
+            class="grid sm:grid-cols-[70%_auto] sm:grid-cols-1 gap-[20px]"
+          >
+            <input
+              type="text"
+              class="border-[1px] border-[#ccc] bg-[transparent] pl-[20px] h-[50px] text-white"
+              placeholder="Email Address"
+            />
+            <button
+              class="bg-[red] px-[10px] rounded-[7px] text-white hover:bg-[rgb(193, 17, 25)] py-[15px] duration-300 hover:bg-sky-70"
+            >
+              Get Started
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   </body>
+  <script>
+    let allquestion = document.querySelectorAll(".faqQustion");
+    // console.log(allquestion);
+    allquestion.forEach((v, index) => {
+      v.addEventListener("click", () => {
+        v.nextElementSibling.classList.toggle("h-[auto]");
+        v.nextElementSibling.classList.toggle("scale-y-100");
+        v.nextElementSibling.classList.toggle("p-[20px]");
+        v.children[1].classList.toggle("rotate-45");
+
+        allquestion.forEach((el, i) => {
+          if (i !== index) {
+            el.nextElementSibling.classList.remove(
+              "h-[auto]",
+              "scale-y-100",
+              "p-[20px]"
+            );
+            el.children[1].classList.remove("rotate-45");
+          }
+        });
+      });
+    });
+  </script>
 </html>
